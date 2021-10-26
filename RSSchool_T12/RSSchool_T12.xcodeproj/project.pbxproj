@@ -1,0 +1,780 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F35C495C27132825007BE3FA /* EditWalletPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35C495B27132825007BE3FA /* EditWalletPresenterTest.swift */; };
+		F35C495E27132C97007BE3FA /* AddWalletPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35C495D27132C97007BE3FA /* AddWalletPresenterTest.swift */; };
+		F35C4960271334B2007BE3FA /* RouterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35C495F271334B2007BE3FA /* RouterTest.swift */; };
+		F35C49622713404A007BE3FA /* TransactionDetailsPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35C49612713404A007BE3FA /* TransactionDetailsPresenterTest.swift */; };
+		F35C496427134372007BE3FA /* EditTrancactionPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35C496327134372007BE3FA /* EditTrancactionPresenterTest.swift */; };
+		F36B81F726FCA9A300C3FEC6 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F36B81F426FCA9A300C3FEC6 /* Montserrat-Medium.ttf */; };
+		F36B81F826FCA9A300C3FEC6 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F36B81F526FCA9A300C3FEC6 /* Montserrat-Regular.ttf */; };
+		F36B81F926FCA9A300C3FEC6 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F36B81F626FCA9A300C3FEC6 /* Montserrat-SemiBold.ttf */; };
+		F36B81FC26FCABCB00C3FEC6 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36B81FB26FCABCB00C3FEC6 /* Helpers.swift */; };
+		F3B1A9D626FBAFB900B6953C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B1A9D526FBAFB900B6953C /* AppDelegate.swift */; };
+		F3B1A9E026FBAFB900B6953C /* RSSchool_T12.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F3B1A9DE26FBAFB900B6953C /* RSSchool_T12.xcdatamodeld */; };
+		F3B1A9E226FBAFBB00B6953C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3B1A9E126FBAFBB00B6953C /* Assets.xcassets */; };
+		F3B1A9E526FBAFBB00B6953C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3B1A9E326FBAFBB00B6953C /* LaunchScreen.storyboard */; };
+		F3B1A9F026FBAFBC00B6953C /* RSSchool_T12Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B1A9EF26FBAFBC00B6953C /* RSSchool_T12Tests.swift */; };
+		F3C29E932705EE2900FC5AD6 /* Wallet+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C29E912705EE2900FC5AD6 /* Wallet+CoreDataClass.swift */; };
+		F3C29E972705F88700FC5AD6 /* WalletDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C29E962705F88700FC5AD6 /* WalletDetailsViewController.swift */; };
+		F3C29E99270601F300FC5AD6 /* WalletDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C29E98270601F300FC5AD6 /* WalletDetailsPresenter.swift */; };
+		F3C29E9B27060FCF00FC5AD6 /* EditWalletPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C29E9A27060FCF00FC5AD6 /* EditWalletPresenter.swift */; };
+		F3C29E9D270742C300FC5AD6 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C29E9C270742C300FC5AD6 /* CoreDataManager.swift */; };
+		F3C29EA12708C48400FC5AD6 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C29EA02708C48400FC5AD6 /* Router.swift */; };
+		F3C29EA32708C4DC00FC5AD6 /* AssemblyBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C29EA22708C4DC00FC5AD6 /* AssemblyBuilder.swift */; };
+		F3C29EA9270CC14C00FC5AD6 /* Transaction+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C29EA7270CC14B00FC5AD6 /* Transaction+CoreDataClass.swift */; };
+		F3C29EB0270CD35D00FC5AD6 /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C29EAE270CD35D00FC5AD6 /* TransactionCell.swift */; };
+		F3C29EB1270CD35D00FC5AD6 /* TransactionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3C29EAF270CD35D00FC5AD6 /* TransactionCell.xib */; };
+		F3C29EB5270CD81500FC5AD6 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F3C29EB4270CD81500FC5AD6 /* Montserrat-Bold.ttf */; };
+		F3C29EBC270DCAD400FC5AD6 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C29EBB270DCAD400FC5AD6 /* TextFieldView.swift */; };
+		F3C29EBE270DCDE300FC5AD6 /* EditTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C29EBD270DCDE300FC5AD6 /* EditTransactionViewController.swift */; };
+		F3C29EC0270DCE3000FC5AD6 /* EditTransactionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C29EBF270DCE3000FC5AD6 /* EditTransactionPresenter.swift */; };
+		F3C29EC3270E245C00FC5AD6 /* TransactionDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C29EC2270E245C00FC5AD6 /* TransactionDetailsViewController.swift */; };
+		F3C29EC5270E24EA00FC5AD6 /* TransactionDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C29EC4270E24EA00FC5AD6 /* TransactionDetailsPresenter.swift */; };
+		F3C29ECB270F4E3600FC5AD6 /* WalletsListPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C29ECA270F4E3600FC5AD6 /* WalletsListPresenterTest.swift */; };
+		F3C29ECE271044F400FC5AD6 /* Transaction+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C29ECC271044F400FC5AD6 /* Transaction+CoreDataProperties.swift */; };
+		F3C29ECF271044F400FC5AD6 /* Wallet+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C29ECD271044F400FC5AD6 /* Wallet+CoreDataProperties.swift */; };
+		F3C29ED12710976700FC5AD6 /* WalletDetailsPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C29ED02710976700FC5AD6 /* WalletDetailsPresenterTest.swift */; };
+		F3DC5D7526FCC05400F8DDFE /* WalletsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DC5D7426FCC05400F8DDFE /* WalletsListViewController.swift */; };
+		F3DC5D7726FCD77300F8DDFE /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DC5D7626FCD77300F8DDFE /* Models.swift */; };
+		F3DC5D7B26FCF7D100F8DDFE /* GlassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DC5D7A26FCF7D100F8DDFE /* GlassView.swift */; };
+		F3DC5D8226FE055B00F8DDFE /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DC5D8126FE055B00F8DDFE /* RoundButton.swift */; };
+		F3DC5D8626FF65F700F8DDFE /* NavigationBarBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DC5D8526FF65F700F8DDFE /* NavigationBarBuilder.swift */; };
+		F3DC5D8D26FFA55500F8DDFE /* EditWalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DC5D8B26FFA55500F8DDFE /* EditWalletViewController.swift */; };
+		F3DC5D8E26FFA55500F8DDFE /* EditWalletViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3DC5D8C26FFA55500F8DDFE /* EditWalletViewController.xib */; };
+		F3DC5D952700F05800F8DDFE /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DC5D942700F05800F8DDFE /* RoundedTextField.swift */; };
+		F3DC5D982700F63000F8DDFE /* ThemesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DC5D972700F63000F8DDFE /* ThemesViewController.swift */; };
+		F3DC5D9A27020F7900F8DDFE /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DC5D9927020F7900F8DDFE /* ThemeManager.swift */; };
+		F3DC5D9D2702165400F8DDFE /* ColorThemesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DC5D9C2702165400F8DDFE /* ColorThemesPresenter.swift */; };
+		F3DC5D9F270352D000F8DDFE /* ThemeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DC5D9E270352D000F8DDFE /* ThemeCell.swift */; };
+		F3DC5DA227036F6000F8DDFE /* CurrencyCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DC5DA127036F6000F8DDFE /* CurrencyCollectionViewController.swift */; };
+		F3DC5DA42703853F00F8DDFE /* CurrencyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DC5DA32703853F00F8DDFE /* CurrencyCell.swift */; };
+		F3DC5DA62703871D00F8DDFE /* CurrencyPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DC5DA52703871D00F8DDFE /* CurrencyPresenter.swift */; };
+		F3DC5DAE2704A69A00F8DDFE /* WalletsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DC5DAD2704A69A00F8DDFE /* WalletsListPresenter.swift */; };
+		F3DC5DB12704AA2E00F8DDFE /* WalletCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DC5DAF2704AA2E00F8DDFE /* WalletCell.swift */; };
+		F3DC5DB22704AA2E00F8DDFE /* WalletCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3DC5DB02704AA2E00F8DDFE /* WalletCell.xib */; };
+		F3DC5DBB2704E51B00F8DDFE /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DC5DBA2704E51B00F8DDFE /* CollectionViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F3B1A9EC26FBAFBC00B6953C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F3B1A9CA26FBAFB900B6953C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F3B1A9D126FBAFB900B6953C;
+			remoteInfo = RSSchool_T12;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F35C495B27132825007BE3FA /* EditWalletPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditWalletPresenterTest.swift; sourceTree = "<group>"; };
+		F35C495D27132C97007BE3FA /* AddWalletPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWalletPresenterTest.swift; sourceTree = "<group>"; };
+		F35C495F271334B2007BE3FA /* RouterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterTest.swift; sourceTree = "<group>"; };
+		F35C49612713404A007BE3FA /* TransactionDetailsPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailsPresenterTest.swift; sourceTree = "<group>"; };
+		F35C496327134372007BE3FA /* EditTrancactionPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTrancactionPresenterTest.swift; sourceTree = "<group>"; };
+		F36B81F426FCA9A300C3FEC6 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		F36B81F526FCA9A300C3FEC6 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		F36B81F626FCA9A300C3FEC6 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
+		F36B81FB26FCABCB00C3FEC6 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		F3B1A9D226FBAFB900B6953C /* RSSchool_T12.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSSchool_T12.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3B1A9D526FBAFB900B6953C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F3B1A9DF26FBAFB900B6953C /* RSSchool_T12.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RSSchool_T12.xcdatamodel; sourceTree = "<group>"; };
+		F3B1A9E126FBAFBB00B6953C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F3B1A9E426FBAFBB00B6953C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F3B1A9E626FBAFBB00B6953C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3B1A9EB26FBAFBC00B6953C /* RSSchool_T12Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RSSchool_T12Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3B1A9EF26FBAFBC00B6953C /* RSSchool_T12Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSchool_T12Tests.swift; sourceTree = "<group>"; };
+		F3B1A9F126FBAFBC00B6953C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3C29E912705EE2900FC5AD6 /* Wallet+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Wallet+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F3C29E962705F88700FC5AD6 /* WalletDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletDetailsViewController.swift; sourceTree = "<group>"; };
+		F3C29E98270601F300FC5AD6 /* WalletDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletDetailsPresenter.swift; sourceTree = "<group>"; };
+		F3C29E9A27060FCF00FC5AD6 /* EditWalletPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditWalletPresenter.swift; sourceTree = "<group>"; };
+		F3C29E9C270742C300FC5AD6 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		F3C29EA02708C48400FC5AD6 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		F3C29EA22708C4DC00FC5AD6 /* AssemblyBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblyBuilder.swift; sourceTree = "<group>"; };
+		F3C29EA7270CC14B00FC5AD6 /* Transaction+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transaction+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F3C29EAE270CD35D00FC5AD6 /* TransactionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
+		F3C29EAF270CD35D00FC5AD6 /* TransactionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionCell.xib; sourceTree = "<group>"; };
+		F3C29EB4270CD81500FC5AD6 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		F3C29EBB270DCAD400FC5AD6 /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
+		F3C29EBD270DCDE300FC5AD6 /* EditTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTransactionViewController.swift; sourceTree = "<group>"; };
+		F3C29EBF270DCE3000FC5AD6 /* EditTransactionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTransactionPresenter.swift; sourceTree = "<group>"; };
+		F3C29EC2270E245C00FC5AD6 /* TransactionDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailsViewController.swift; sourceTree = "<group>"; };
+		F3C29EC4270E24EA00FC5AD6 /* TransactionDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailsPresenter.swift; sourceTree = "<group>"; };
+		F3C29ECA270F4E3600FC5AD6 /* WalletsListPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletsListPresenterTest.swift; sourceTree = "<group>"; };
+		F3C29ECC271044F400FC5AD6 /* Transaction+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transaction+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F3C29ECD271044F400FC5AD6 /* Wallet+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Wallet+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F3C29ED02710976700FC5AD6 /* WalletDetailsPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletDetailsPresenterTest.swift; sourceTree = "<group>"; };
+		F3DC5D7426FCC05400F8DDFE /* WalletsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletsListViewController.swift; sourceTree = "<group>"; };
+		F3DC5D7626FCD77300F8DDFE /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		F3DC5D7A26FCF7D100F8DDFE /* GlassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassView.swift; sourceTree = "<group>"; };
+		F3DC5D8126FE055B00F8DDFE /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		F3DC5D8526FF65F700F8DDFE /* NavigationBarBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarBuilder.swift; sourceTree = "<group>"; };
+		F3DC5D8B26FFA55500F8DDFE /* EditWalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditWalletViewController.swift; sourceTree = "<group>"; };
+		F3DC5D8C26FFA55500F8DDFE /* EditWalletViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditWalletViewController.xib; sourceTree = "<group>"; };
+		F3DC5D942700F05800F8DDFE /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
+		F3DC5D972700F63000F8DDFE /* ThemesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemesViewController.swift; sourceTree = "<group>"; };
+		F3DC5D9927020F7900F8DDFE /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
+		F3DC5D9C2702165400F8DDFE /* ColorThemesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorThemesPresenter.swift; sourceTree = "<group>"; };
+		F3DC5D9E270352D000F8DDFE /* ThemeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeCell.swift; sourceTree = "<group>"; };
+		F3DC5DA127036F6000F8DDFE /* CurrencyCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyCollectionViewController.swift; sourceTree = "<group>"; };
+		F3DC5DA32703853F00F8DDFE /* CurrencyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyCell.swift; sourceTree = "<group>"; };
+		F3DC5DA52703871D00F8DDFE /* CurrencyPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyPresenter.swift; sourceTree = "<group>"; };
+		F3DC5DAD2704A69A00F8DDFE /* WalletsListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletsListPresenter.swift; sourceTree = "<group>"; };
+		F3DC5DAF2704AA2E00F8DDFE /* WalletCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletCell.swift; sourceTree = "<group>"; };
+		F3DC5DB02704AA2E00F8DDFE /* WalletCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WalletCell.xib; sourceTree = "<group>"; };
+		F3DC5DBA2704E51B00F8DDFE /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F3B1A9CF26FBAFB900B6953C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3B1A9E826FBAFBC00B6953C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F35C4967271346D8007BE3FA /* System */ = {
+			isa = PBXGroup;
+			children = (
+				F3B1A9E326FBAFBB00B6953C /* LaunchScreen.storyboard */,
+				F3B1A9E126FBAFBB00B6953C /* Assets.xcassets */,
+				F3B1A9D526FBAFB900B6953C /* AppDelegate.swift */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
+		F360E5D926FC8E9400CAA064 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F3C29EB4270CD81500FC5AD6 /* Montserrat-Bold.ttf */,
+				F36B81F426FCA9A300C3FEC6 /* Montserrat-Medium.ttf */,
+				F36B81F526FCA9A300C3FEC6 /* Montserrat-Regular.ttf */,
+				F36B81F626FCA9A300C3FEC6 /* Montserrat-SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		F36B81FA26FCAB9F00C3FEC6 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F36B81FB26FCABCB00C3FEC6 /* Helpers.swift */,
+				F3C29EA02708C48400FC5AD6 /* Router.swift */,
+				F3C29EA22708C4DC00FC5AD6 /* AssemblyBuilder.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		F3B1A9C926FBAFB900B6953C = {
+			isa = PBXGroup;
+			children = (
+				F3B1A9D426FBAFB900B6953C /* RSSchool_T12 */,
+				F3B1A9EE26FBAFBC00B6953C /* RSSchool_T12Tests */,
+				F3B1A9D326FBAFB900B6953C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F3B1A9D326FBAFB900B6953C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F3B1A9D226FBAFB900B6953C /* RSSchool_T12.app */,
+				F3B1A9EB26FBAFBC00B6953C /* RSSchool_T12Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F3B1A9D426FBAFB900B6953C /* RSSchool_T12 */ = {
+			isa = PBXGroup;
+			children = (
+				F3C29EA6270C831700FC5AD6 /* Modules */,
+				F3DC5DB32704B09800F8DDFE /* Models */,
+				F3DC5D7C26FE007A00F8DDFE /* Views */,
+				F36B81FA26FCAB9F00C3FEC6 /* Utils */,
+				F360E5D926FC8E9400CAA064 /* Fonts */,
+				F35C4967271346D8007BE3FA /* System */,
+				F3B1A9E626FBAFBB00B6953C /* Info.plist */,
+			);
+			path = RSSchool_T12;
+			sourceTree = "<group>";
+		};
+		F3B1A9EE26FBAFBC00B6953C /* RSSchool_T12Tests */ = {
+			isa = PBXGroup;
+			children = (
+				F35C496327134372007BE3FA /* EditTrancactionPresenterTest.swift */,
+				F35C495F271334B2007BE3FA /* RouterTest.swift */,
+				F35C49612713404A007BE3FA /* TransactionDetailsPresenterTest.swift */,
+				F35C495D27132C97007BE3FA /* AddWalletPresenterTest.swift */,
+				F35C495B27132825007BE3FA /* EditWalletPresenterTest.swift */,
+				F3C29ECA270F4E3600FC5AD6 /* WalletsListPresenterTest.swift */,
+				F3C29ED02710976700FC5AD6 /* WalletDetailsPresenterTest.swift */,
+				F3B1A9EF26FBAFBC00B6953C /* RSSchool_T12Tests.swift */,
+				F3B1A9F126FBAFBC00B6953C /* Info.plist */,
+			);
+			path = RSSchool_T12Tests;
+			sourceTree = "<group>";
+		};
+		F3C29E952705F85800FC5AD6 /* WalletDetails */ = {
+			isa = PBXGroup;
+			children = (
+				F3C29E962705F88700FC5AD6 /* WalletDetailsViewController.swift */,
+				F3C29E98270601F300FC5AD6 /* WalletDetailsPresenter.swift */,
+			);
+			path = WalletDetails;
+			sourceTree = "<group>";
+		};
+		F3C29EA6270C831700FC5AD6 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				F3C29EC1270E243400FC5AD6 /* TransactionDetails */,
+				F3C29EBA270DC97D00FC5AD6 /* EditTransaction */,
+				F3C29EAB270CD15400FC5AD6 /* Transactions */,
+				F3DC5D9B270215DA00F8DDFE /* ColorThemes */,
+				F3DC5DA027036EAD00F8DDFE /* Currency */,
+				F3DC5DAC2704A48300F8DDFE /* EditWallet */,
+				F3C29E952705F85800FC5AD6 /* WalletDetails */,
+				F3DC5DAB2704A46B00F8DDFE /* WalletsList */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		F3C29EAB270CD15400FC5AD6 /* Transactions */ = {
+			isa = PBXGroup;
+			children = (
+				F3C29EAE270CD35D00FC5AD6 /* TransactionCell.swift */,
+				F3C29EAF270CD35D00FC5AD6 /* TransactionCell.xib */,
+			);
+			path = Transactions;
+			sourceTree = "<group>";
+		};
+		F3C29EBA270DC97D00FC5AD6 /* EditTransaction */ = {
+			isa = PBXGroup;
+			children = (
+				F3C29EBD270DCDE300FC5AD6 /* EditTransactionViewController.swift */,
+				F3C29EBF270DCE3000FC5AD6 /* EditTransactionPresenter.swift */,
+			);
+			path = EditTransaction;
+			sourceTree = "<group>";
+		};
+		F3C29EC1270E243400FC5AD6 /* TransactionDetails */ = {
+			isa = PBXGroup;
+			children = (
+				F3C29EC2270E245C00FC5AD6 /* TransactionDetailsViewController.swift */,
+				F3C29EC4270E24EA00FC5AD6 /* TransactionDetailsPresenter.swift */,
+			);
+			path = TransactionDetails;
+			sourceTree = "<group>";
+		};
+		F3DC5D7C26FE007A00F8DDFE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F3DC5DBA2704E51B00F8DDFE /* CollectionViewController.swift */,
+				F3DC5D7A26FCF7D100F8DDFE /* GlassView.swift */,
+				F3DC5D8126FE055B00F8DDFE /* RoundButton.swift */,
+				F3DC5D8526FF65F700F8DDFE /* NavigationBarBuilder.swift */,
+				F3DC5D942700F05800F8DDFE /* RoundedTextField.swift */,
+				F3C29EBB270DCAD400FC5AD6 /* TextFieldView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F3DC5D9B270215DA00F8DDFE /* ColorThemes */ = {
+			isa = PBXGroup;
+			children = (
+				F3DC5D9927020F7900F8DDFE /* ThemeManager.swift */,
+				F3DC5D972700F63000F8DDFE /* ThemesViewController.swift */,
+				F3DC5D9C2702165400F8DDFE /* ColorThemesPresenter.swift */,
+				F3DC5D9E270352D000F8DDFE /* ThemeCell.swift */,
+			);
+			path = ColorThemes;
+			sourceTree = "<group>";
+		};
+		F3DC5DA027036EAD00F8DDFE /* Currency */ = {
+			isa = PBXGroup;
+			children = (
+				F3DC5DA127036F6000F8DDFE /* CurrencyCollectionViewController.swift */,
+				F3DC5DA32703853F00F8DDFE /* CurrencyCell.swift */,
+				F3DC5DA52703871D00F8DDFE /* CurrencyPresenter.swift */,
+			);
+			path = Currency;
+			sourceTree = "<group>";
+		};
+		F3DC5DAB2704A46B00F8DDFE /* WalletsList */ = {
+			isa = PBXGroup;
+			children = (
+				F3DC5D7426FCC05400F8DDFE /* WalletsListViewController.swift */,
+				F3DC5DAD2704A69A00F8DDFE /* WalletsListPresenter.swift */,
+				F3DC5DAF2704AA2E00F8DDFE /* WalletCell.swift */,
+				F3DC5DB02704AA2E00F8DDFE /* WalletCell.xib */,
+			);
+			path = WalletsList;
+			sourceTree = "<group>";
+		};
+		F3DC5DAC2704A48300F8DDFE /* EditWallet */ = {
+			isa = PBXGroup;
+			children = (
+				F3DC5D8B26FFA55500F8DDFE /* EditWalletViewController.swift */,
+				F3DC5D8C26FFA55500F8DDFE /* EditWalletViewController.xib */,
+				F3C29E9A27060FCF00FC5AD6 /* EditWalletPresenter.swift */,
+			);
+			path = EditWallet;
+			sourceTree = "<group>";
+		};
+		F3DC5DB32704B09800F8DDFE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F3B1A9DE26FBAFB900B6953C /* RSSchool_T12.xcdatamodeld */,
+				F3C29ECC271044F400FC5AD6 /* Transaction+CoreDataProperties.swift */,
+				F3C29ECD271044F400FC5AD6 /* Wallet+CoreDataProperties.swift */,
+				F3C29EA7270CC14B00FC5AD6 /* Transaction+CoreDataClass.swift */,
+				F3C29E912705EE2900FC5AD6 /* Wallet+CoreDataClass.swift */,
+				F3DC5D7626FCD77300F8DDFE /* Models.swift */,
+				F3C29E9C270742C300FC5AD6 /* CoreDataManager.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F3B1A9D126FBAFB900B6953C /* RSSchool_T12 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3B1A9FF26FBAFBC00B6953C /* Build configuration list for PBXNativeTarget "RSSchool_T12" */;
+			buildPhases = (
+				F3B1A9CE26FBAFB900B6953C /* Sources */,
+				F3B1A9CF26FBAFB900B6953C /* Frameworks */,
+				F3B1A9D026FBAFB900B6953C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RSSchool_T12;
+			productName = RSSchool_T12;
+			productReference = F3B1A9D226FBAFB900B6953C /* RSSchool_T12.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F3B1A9EA26FBAFBC00B6953C /* RSSchool_T12Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3B1AA0226FBAFBC00B6953C /* Build configuration list for PBXNativeTarget "RSSchool_T12Tests" */;
+			buildPhases = (
+				F3B1A9E726FBAFBC00B6953C /* Sources */,
+				F3B1A9E826FBAFBC00B6953C /* Frameworks */,
+				F3B1A9E926FBAFBC00B6953C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F3B1A9ED26FBAFBC00B6953C /* PBXTargetDependency */,
+			);
+			name = RSSchool_T12Tests;
+			productName = RSSchool_T12Tests;
+			productReference = F3B1A9EB26FBAFBC00B6953C /* RSSchool_T12Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F3B1A9CA26FBAFB900B6953C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					F3B1A9D126FBAFB900B6953C = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					F3B1A9EA26FBAFBC00B6953C = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = F3B1A9D126FBAFB900B6953C;
+					};
+				};
+			};
+			buildConfigurationList = F3B1A9CD26FBAFB900B6953C /* Build configuration list for PBXProject "RSSchool_T12" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F3B1A9C926FBAFB900B6953C;
+			productRefGroup = F3B1A9D326FBAFB900B6953C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F3B1A9D126FBAFB900B6953C /* RSSchool_T12 */,
+				F3B1A9EA26FBAFBC00B6953C /* RSSchool_T12Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F3B1A9D026FBAFB900B6953C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F36B81F926FCA9A300C3FEC6 /* Montserrat-SemiBold.ttf in Resources */,
+				F3DC5DB22704AA2E00F8DDFE /* WalletCell.xib in Resources */,
+				F3C29EB1270CD35D00FC5AD6 /* TransactionCell.xib in Resources */,
+				F3B1A9E526FBAFBB00B6953C /* LaunchScreen.storyboard in Resources */,
+				F3B1A9E226FBAFBB00B6953C /* Assets.xcassets in Resources */,
+				F3C29EB5270CD81500FC5AD6 /* Montserrat-Bold.ttf in Resources */,
+				F36B81F726FCA9A300C3FEC6 /* Montserrat-Medium.ttf in Resources */,
+				F36B81F826FCA9A300C3FEC6 /* Montserrat-Regular.ttf in Resources */,
+				F3DC5D8E26FFA55500F8DDFE /* EditWalletViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3B1A9E926FBAFBC00B6953C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F3B1A9CE26FBAFB900B6953C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3B1A9E026FBAFB900B6953C /* RSSchool_T12.xcdatamodeld in Sources */,
+				F3DC5D8626FF65F700F8DDFE /* NavigationBarBuilder.swift in Sources */,
+				F3C29ECF271044F400FC5AD6 /* Wallet+CoreDataProperties.swift in Sources */,
+				F3DC5D7726FCD77300F8DDFE /* Models.swift in Sources */,
+				F3DC5D952700F05800F8DDFE /* RoundedTextField.swift in Sources */,
+				F3C29EA32708C4DC00FC5AD6 /* AssemblyBuilder.swift in Sources */,
+				F3DC5DBB2704E51B00F8DDFE /* CollectionViewController.swift in Sources */,
+				F3C29E9D270742C300FC5AD6 /* CoreDataManager.swift in Sources */,
+				F3DC5D8226FE055B00F8DDFE /* RoundButton.swift in Sources */,
+				F3C29EA9270CC14C00FC5AD6 /* Transaction+CoreDataClass.swift in Sources */,
+				F3C29E99270601F300FC5AD6 /* WalletDetailsPresenter.swift in Sources */,
+				F3DC5DAE2704A69A00F8DDFE /* WalletsListPresenter.swift in Sources */,
+				F3C29EC0270DCE3000FC5AD6 /* EditTransactionPresenter.swift in Sources */,
+				F3DC5DB12704AA2E00F8DDFE /* WalletCell.swift in Sources */,
+				F3DC5D7526FCC05400F8DDFE /* WalletsListViewController.swift in Sources */,
+				F3C29EBC270DCAD400FC5AD6 /* TextFieldView.swift in Sources */,
+				F3C29ECE271044F400FC5AD6 /* Transaction+CoreDataProperties.swift in Sources */,
+				F3DC5D982700F63000F8DDFE /* ThemesViewController.swift in Sources */,
+				F3DC5DA227036F6000F8DDFE /* CurrencyCollectionViewController.swift in Sources */,
+				F3DC5DA62703871D00F8DDFE /* CurrencyPresenter.swift in Sources */,
+				F3DC5DA42703853F00F8DDFE /* CurrencyCell.swift in Sources */,
+				F3C29E9B27060FCF00FC5AD6 /* EditWalletPresenter.swift in Sources */,
+				F3C29EC5270E24EA00FC5AD6 /* TransactionDetailsPresenter.swift in Sources */,
+				F3C29EC3270E245C00FC5AD6 /* TransactionDetailsViewController.swift in Sources */,
+				F3DC5D8D26FFA55500F8DDFE /* EditWalletViewController.swift in Sources */,
+				F3C29EB0270CD35D00FC5AD6 /* TransactionCell.swift in Sources */,
+				F3B1A9D626FBAFB900B6953C /* AppDelegate.swift in Sources */,
+				F3C29E972705F88700FC5AD6 /* WalletDetailsViewController.swift in Sources */,
+				F3DC5D7B26FCF7D100F8DDFE /* GlassView.swift in Sources */,
+				F36B81FC26FCABCB00C3FEC6 /* Helpers.swift in Sources */,
+				F3DC5D9D2702165400F8DDFE /* ColorThemesPresenter.swift in Sources */,
+				F3C29EA12708C48400FC5AD6 /* Router.swift in Sources */,
+				F3C29EBE270DCDE300FC5AD6 /* EditTransactionViewController.swift in Sources */,
+				F3C29E932705EE2900FC5AD6 /* Wallet+CoreDataClass.swift in Sources */,
+				F3DC5D9A27020F7900F8DDFE /* ThemeManager.swift in Sources */,
+				F3DC5D9F270352D000F8DDFE /* ThemeCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3B1A9E726FBAFBC00B6953C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3C29ED12710976700FC5AD6 /* WalletDetailsPresenterTest.swift in Sources */,
+				F35C495E27132C97007BE3FA /* AddWalletPresenterTest.swift in Sources */,
+				F3B1A9F026FBAFBC00B6953C /* RSSchool_T12Tests.swift in Sources */,
+				F3C29ECB270F4E3600FC5AD6 /* WalletsListPresenterTest.swift in Sources */,
+				F35C4960271334B2007BE3FA /* RouterTest.swift in Sources */,
+				F35C496427134372007BE3FA /* EditTrancactionPresenterTest.swift in Sources */,
+				F35C495C27132825007BE3FA /* EditWalletPresenterTest.swift in Sources */,
+				F35C49622713404A007BE3FA /* TransactionDetailsPresenterTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F3B1A9ED26FBAFBC00B6953C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F3B1A9D126FBAFB900B6953C /* RSSchool_T12 */;
+			targetProxy = F3B1A9EC26FBAFBC00B6953C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F3B1A9E326FBAFBB00B6953C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F3B1A9E426FBAFBB00B6953C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F3B1A9FD26FBAFBC00B6953C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F3B1A9FE26FBAFBC00B6953C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F3B1AA0026FBAFBC00B6953C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8U425UZ7MY;
+				INFOPLIST_FILE = RSSchool_T12/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.margaritaaz.RSSchool-T12";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F3B1AA0126FBAFBC00B6953C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8U425UZ7MY;
+				INFOPLIST_FILE = RSSchool_T12/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.margaritaaz.RSSchool-T12";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F3B1AA0326FBAFBC00B6953C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8U425UZ7MY;
+				INFOPLIST_FILE = RSSchool_T12Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.margaritaaz.RSSchool-T12Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RSSchool_T12.app/RSSchool_T12";
+			};
+			name = Debug;
+		};
+		F3B1AA0426FBAFBC00B6953C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8U425UZ7MY;
+				INFOPLIST_FILE = RSSchool_T12Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.margaritaaz.RSSchool-T12Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RSSchool_T12.app/RSSchool_T12";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F3B1A9CD26FBAFB900B6953C /* Build configuration list for PBXProject "RSSchool_T12" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3B1A9FD26FBAFBC00B6953C /* Debug */,
+				F3B1A9FE26FBAFBC00B6953C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3B1A9FF26FBAFBC00B6953C /* Build configuration list for PBXNativeTarget "RSSchool_T12" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3B1AA0026FBAFBC00B6953C /* Debug */,
+				F3B1AA0126FBAFBC00B6953C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3B1AA0226FBAFBC00B6953C /* Build configuration list for PBXNativeTarget "RSSchool_T12Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3B1AA0326FBAFBC00B6953C /* Debug */,
+				F3B1AA0426FBAFBC00B6953C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F3B1A9DE26FBAFB900B6953C /* RSSchool_T12.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F3B1A9DF26FBAFB900B6953C /* RSSchool_T12.xcdatamodel */,
+			);
+			currentVersion = F3B1A9DF26FBAFB900B6953C /* RSSchool_T12.xcdatamodel */;
+			path = RSSchool_T12.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = F3B1A9CA26FBAFB900B6953C /* Project object */;
+}

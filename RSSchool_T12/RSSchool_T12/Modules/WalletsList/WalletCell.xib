@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="WalletCell" id="gTV-IL-0wX" customClass="WalletCell" customModule="RSSchool_T12" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="380" height="208"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="380" height="208"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jx3-gg-dCG" customClass="GlassView" customModule="RSSchool_T12" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="380" height="208"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HUV-de-aJD">
+                                <rect key="frame" x="30" y="20" width="33" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="Rick Black FOGRA 29"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000 $" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Can-YA-GhJ">
+                                <rect key="frame" x="30" y="71" width="53" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="Rick Black FOGRA 29"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last change" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JYE-4d-pci">
+                                <rect key="frame" x="30" y="136" width="93" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="Rick Black FOGRA 29"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rak-xd-nbd">
+                                <rect key="frame" x="30" y="167" width="36" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="Rick Black FOGRA 29"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eiN-H8-LDY">
+                                <rect key="frame" x="348" y="24" width="9" height="22"/>
+                                <color key="tintColor" name="Rick Black FOGRA 29"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="chevron.compact.right" catalog="system"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Rak-xd-nbd" secondAttribute="bottom" constant="20" id="0CQ-Rn-zBk"/>
+                            <constraint firstItem="HUV-de-aJD" firstAttribute="top" secondItem="Jx3-gg-dCG" secondAttribute="top" constant="20" id="0ai-zk-tRN"/>
+                            <constraint firstItem="eiN-H8-LDY" firstAttribute="centerY" secondItem="HUV-de-aJD" secondAttribute="centerY" constant="4.5" id="6sx-gG-oOc"/>
+                            <constraint firstItem="HUV-de-aJD" firstAttribute="leading" secondItem="Jx3-gg-dCG" secondAttribute="leading" constant="30" id="8Hx-SX-hFd"/>
+                            <constraint firstItem="Rak-xd-nbd" firstAttribute="leading" secondItem="Jx3-gg-dCG" secondAttribute="leading" constant="30" id="Vz8-L2-6zp"/>
+                            <constraint firstAttribute="trailing" secondItem="eiN-H8-LDY" secondAttribute="trailing" constant="23" id="hDK-2y-cum"/>
+                            <constraint firstItem="JYE-4d-pci" firstAttribute="leading" secondItem="Jx3-gg-dCG" secondAttribute="leading" constant="30" id="p0s-lx-Wiw"/>
+                            <constraint firstItem="Can-YA-GhJ" firstAttribute="leading" secondItem="Jx3-gg-dCG" secondAttribute="leading" constant="30" id="qpH-gc-uRH"/>
+                            <constraint firstItem="Can-YA-GhJ" firstAttribute="top" secondItem="HUV-de-aJD" secondAttribute="bottom" constant="30" id="tvc-NG-TCS"/>
+                            <constraint firstItem="Rak-xd-nbd" firstAttribute="top" secondItem="JYE-4d-pci" secondAttribute="bottom" constant="10" id="yGQ-ZX-nMG"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Jx3-gg-dCG" secondAttribute="trailing" id="APB-Pg-l1z"/>
+                <constraint firstItem="Jx3-gg-dCG" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ZhI-6m-4kh"/>
+                <constraint firstItem="Jx3-gg-dCG" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="rRh-QA-2XF"/>
+                <constraint firstAttribute="bottom" secondItem="Jx3-gg-dCG" secondAttribute="bottom" id="vNG-Kv-zS0"/>
+            </constraints>
+            <size key="customSize" width="167" height="108"/>
+            <connections>
+                <outlet property="amountLabel" destination="Can-YA-GhJ" id="dW9-2s-EtG"/>
+                <outlet property="lastChangeDateLabel" destination="Rak-xd-nbd" id="xK3-Ys-ied"/>
+                <outlet property="lastChangeTitleLabel" destination="JYE-4d-pci" id="0KI-5r-q1Y"/>
+                <outlet property="titleLabel" destination="HUV-de-aJD" id="ujA-UW-ZvM"/>
+            </connections>
+            <point key="canvasLocation" x="221.73913043478262" y="83.035714285714278"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="chevron.compact.right" catalog="system" width="64" height="128"/>
+        <namedColor name="Rick Black FOGRA 29">
+            <color red="0.027000000700354576" green="0.063000001013278961" blue="0.075000002980232239" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
