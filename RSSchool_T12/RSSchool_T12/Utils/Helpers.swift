@@ -19,16 +19,16 @@ extension UIFont {
 }
 
 extension UIColor {
-    static let amaranthRed: UIColor = UIColor(named: "Amaranth Red")!
-    static let babyPowder: UIColor = UIColor(named: "Baby Powder")!
-    static let celadon: UIColor = UIColor(named: "Celadon")!
-    static let darkPurple: UIColor = UIColor(named: "Dark Purple")!
-    static let deepSaffron: UIColor = UIColor(named: "Deep Saffron")!
-    static let greenBlueCrayola: UIColor = UIColor(named: "Green Blue Crayola")!
-    static let honeydew: UIColor = UIColor(named: "Honeydew")!
-    static let lightCyan: UIColor = UIColor(named: "Light Cyan")!
-    static let pink: UIColor = UIColor(named: "Pink")!
-    static let rickBlack: UIColor = UIColor(named: "Rick Black FOGRA 29")!
+    static let amaranthRed: UIColor = UIColor(named: "Amaranth Red") ?? .red
+    static let babyPowder: UIColor = UIColor(named: "Baby Powder") ?? .white
+    static let celadon: UIColor = UIColor(named: "Celadon") ?? .green
+    static let darkPurple: UIColor = UIColor(named: "Dark Purple") ?? .black
+    static let deepSaffron: UIColor = UIColor(named: "Deep Saffron") ?? .orange
+    static let greenBlueCrayola: UIColor = UIColor(named: "Green Blue Crayola") ?? .blue
+    static let honeydew: UIColor = UIColor(named: "Honeydew") ?? .gray
+    static let lightCyan: UIColor = UIColor(named: "Light Cyan") ?? .cyan
+    static let pink: UIColor = UIColor(named: "Pink") ?? .pink
+    static let rickBlack: UIColor = UIColor(named: "Rick Black FOGRA 29") ?? .black
 }
 
 struct Constants {
