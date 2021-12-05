@@ -20,14 +20,16 @@ protocol TransactionDetailsPresenterProtocol {
 final class TransactionDetailsPresenter {
     private let wallet: Wallet
     private var transaction: Transaction
-    var router: RouterProtocol?
+    private var router: RouterProtocol?
     private weak var delegate: TransactionDelegate?
+    private var coreData: CoreDataManagerProtocol
     
-    init(router: RouterProtocol, transaction: Transaction, wallet: Wallet, delegate: TransactionDelegate?) {
+    init(router: RouterProtocol, transaction: Transaction, wallet: Wallet, delegate: TransactionDelegate?, coreData: CoreDataManagerProtocol) {
         self.transaction = transaction
         self.router = router
         self.wallet = wallet
         self.delegate = delegate
+        self.coreData = coreData
     }
 }
 
@@ -43,7 +45,7 @@ extension TransactionDetailsPresenter: TransactionDetailsPresenterProtocol {
     var note: String { transaction.note ?? "" }
     
     func deleteTransaction() {
-        CoreDataManager.sharedManager.deleteObject(transaction)
+        coreData.deleteObject(transaction)
         delegate?.updateTransaction()
         router?.pop()
     }

@@ -8,11 +8,19 @@
 import Foundation
 import CoreData
 
+protocol CoreDataManagerProtocol: AnyObject {
+    var contextHasChanges: Bool { get }
+    var managedContext: NSManagedObjectContext { get }
+    func saveContext()
+    func cancelChanges()
+    func getObject(_ objectId: NSManagedObjectID) -> NSManagedObject?
+    func deleteObject(_ object: NSManagedObject)
+}
+
 class CoreDataManager {
-    static let sharedManager = CoreDataManager()
-    private init() {}
-    lazy var storeContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "RSSchool_T12")
+    let containerName: String
+    private lazy var storeContainer: NSPersistentContainer = {
+        let container = NSPersistentContainer(name: self.containerName)
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 fatalError("Unresolved error \(error), \(error.userInfo)")
@@ -21,15 +29,15 @@ class CoreDataManager {
         return container
     }()
     
-    lazy var managedContext: NSManagedObjectContext = {
-        return storeContainer.viewContext
-    }()
+    lazy var managedContext: NSManagedObjectContext = { storeContainer.viewContext }()
     
-    var contextHasChanges: Bool {
-        get {
-            return managedContext.hasChanges
-        }
+    init(containerName: String) {
+        self.containerName = containerName
     }
+}
+
+extension CoreDataManager: CoreDataManagerProtocol {
+    var contextHasChanges: Bool { managedContext.hasChanges }
     
     func saveContext() {
         if managedContext.hasChanges {
@@ -49,7 +57,7 @@ class CoreDataManager {
     func getObject(_ objectId: NSManagedObjectID) -> NSManagedObject? {
         var object: NSManagedObject?
         do {
-            object = try CoreDataManager.sharedManager.managedContext.existingObject(with: objectId)
+            object = try managedContext.existingObject(with: objectId)
         } catch {
             let nserror = error as NSError
             fatalError("Unresolved error \(nserror), \(nserror.userInfo)")

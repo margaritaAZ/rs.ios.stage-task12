@@ -16,6 +16,7 @@
 		F36B81F826FCA9A300C3FEC6 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F36B81F526FCA9A300C3FEC6 /* Montserrat-Regular.ttf */; };
 		F36B81F926FCA9A300C3FEC6 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F36B81F626FCA9A300C3FEC6 /* Montserrat-SemiBold.ttf */; };
 		F36B81FC26FCABCB00C3FEC6 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36B81FB26FCABCB00C3FEC6 /* Helpers.swift */; };
+		F3A55C822735642700BC6540 /* TestCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A55C812735642700BC6540 /* TestCoreDataManager.swift */; };
 		F3B1A9D626FBAFB900B6953C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B1A9D526FBAFB900B6953C /* AppDelegate.swift */; };
 		F3B1A9E026FBAFB900B6953C /* RSSchool_T12.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F3B1A9DE26FBAFB900B6953C /* RSSchool_T12.xcdatamodeld */; };
 		F3B1A9E226FBAFBB00B6953C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3B1A9E126FBAFBB00B6953C /* Assets.xcassets */; };
@@ -82,6 +83,7 @@
 		F36B81F526FCA9A300C3FEC6 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		F36B81F626FCA9A300C3FEC6 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
 		F36B81FB26FCABCB00C3FEC6 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		F3A55C812735642700BC6540 /* TestCoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCoreDataManager.swift; sourceTree = "<group>"; };
 		F3B1A9D226FBAFB900B6953C /* RSSchool_T12.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSSchool_T12.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3B1A9D526FBAFB900B6953C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3B1A9DF26FBAFB900B6953C /* RSSchool_T12.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RSSchool_T12.xcdatamodel; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 		F3B1A9EE26FBAFBC00B6953C /* RSSchool_T12Tests */ = {
 			isa = PBXGroup;
 			children = (
+				F3A55C812735642700BC6540 /* TestCoreDataManager.swift */,
 				F35C496327134372007BE3FA /* EditTrancactionPresenterTest.swift */,
 				F35C495F271334B2007BE3FA /* RouterTest.swift */,
 				F35C49612713404A007BE3FA /* TransactionDetailsPresenterTest.swift */,
@@ -499,6 +502,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3C29ED12710976700FC5AD6 /* WalletDetailsPresenterTest.swift in Sources */,
+				F3A55C822735642700BC6540 /* TestCoreDataManager.swift in Sources */,
 				F35C495E27132C97007BE3FA /* AddWalletPresenterTest.swift in Sources */,
 				F3B1A9F026FBAFBC00B6953C /* RSSchool_T12Tests.swift in Sources */,
 				F3C29ECB270F4E3600FC5AD6 /* WalletsListPresenterTest.swift in Sources */,

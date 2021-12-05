@@ -12,15 +12,16 @@ class AddWalletPresenterTest: XCTestCase {
     var presenter: EditWalletPresenter!
     var view: MockView!
     var router: RouterProtocol!
+    let coreDataManager: CoreDataManagerProtocol = TestCoreDataManager()
 
     override func setUpWithError() throws {
         view = MockView()
         router = Router(navigationController: UINavigationController(), assemblyBuilder: AssemblyBuilder())
-        presenter = EditWalletPresenter(router: router, view: view, wallet: nil, delegate: nil)
+        presenter = EditWalletPresenter(router: router, view: view, wallet: nil, delegate: nil, coreData: coreDataManager)
     }
 
     override func tearDownWithError() throws {
-        CoreDataManager.sharedManager.cancelChanges()
+        coreDataManager.cancelChanges()
         view = nil
         router = nil
         presenter = nil

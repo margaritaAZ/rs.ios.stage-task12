@@ -14,15 +14,16 @@ class WalletDetailsPresenterTest: XCTestCase {
     var router: RouterProtocol!
     var wallet: Wallet!
     var transaction: Transaction!
+    let coreDataManager: CoreDataManagerProtocol = TestCoreDataManager()
 
     override func setUpWithError() throws {
-        let wallet = Wallet(context: CoreDataManager.sharedManager.managedContext)
+        let wallet = Wallet(context: coreDataManager.managedContext)
         wallet.title = "Unit test"
         wallet.themeId = 1
         wallet.changeDate = Date()
         wallet.currencyCode = "USD"
         
-        let transaction = Transaction(context: CoreDataManager.sharedManager.managedContext)
+        let transaction = Transaction(context: coreDataManager.managedContext)
         transaction.wallet = wallet
         transaction.creationDate = Date()
         transaction.note = "Note"
@@ -33,11 +34,11 @@ class WalletDetailsPresenterTest: XCTestCase {
         self.wallet = wallet
         view = MockView()
         router = Router(navigationController: UINavigationController(), assemblyBuilder: AssemblyBuilder())
-        presenter = WalletDetailsPresenter(router: router, view: view, wallet: wallet)
+        presenter = WalletDetailsPresenter(router: router, view: view, wallet: wallet, coreDataManager: coreDataManager)
     }
 
     override func tearDownWithError() throws {
-        CoreDataManager.sharedManager.cancelChanges()
+        coreDataManager.cancelChanges()
         view = nil
         router = nil
         presenter = nil
@@ -55,7 +56,7 @@ class WalletDetailsPresenterTest: XCTestCase {
     
     func testAmount() throws {
         XCTAssertEqual(wallet.balance, transaction.value)
-        let transaction = Transaction(context: CoreDataManager.sharedManager.managedContext)
+        let transaction = Transaction(context: coreDataManager.managedContext)
         transaction.wallet = wallet
         transaction.creationDate = Date()
         transaction.note = "Note"

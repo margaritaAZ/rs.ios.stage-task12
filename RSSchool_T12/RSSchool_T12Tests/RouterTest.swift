@@ -21,10 +21,11 @@ class RouterTest: XCTestCase {
     var router: RouterProtocol!
     var navigationController = MockNavigationController()
     let assembly = AssemblyBuilder()
+    let coreDataManager: CoreDataManagerProtocol = TestCoreDataManager()
 
     override func setUpWithError() throws {
         router = Router(navigationController: navigationController, assemblyBuilder: assembly)
-        CoreDataManager.sharedManager.cancelChanges()
+        coreDataManager.cancelChanges()
     }
 
     override func tearDownWithError() throws {
@@ -32,7 +33,7 @@ class RouterTest: XCTestCase {
     }
 
     func testRouter() throws {
-        let wallet = Wallet(context: CoreDataManager.sharedManager.managedContext)
+        let wallet = Wallet(context: coreDataManager.managedContext)
         
         router.showWalletDetail(wallet: wallet)
         XCTAssertTrue(navigationController.presentedVC is WalletDetailsViewController)
@@ -49,7 +50,7 @@ class RouterTest: XCTestCase {
         router.showEditTransaction(transaction: nil, wallet: wallet, delegate: nil)
         XCTAssertTrue(navigationController.presentedVC is EditTransactionViewController)
         
-        let transaction = Transaction(context: CoreDataManager.sharedManager.managedContext)
+        let transaction = Transaction(context: coreDataManager.managedContext)
         
         router.showTransactionDetails(transaction: transaction, wallet: wallet, delegate: nil)
         XCTAssertTrue(navigationController.presentedVC is TransactionDetailsViewController)

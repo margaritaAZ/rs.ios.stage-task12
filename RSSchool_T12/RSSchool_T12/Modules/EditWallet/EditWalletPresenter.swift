@@ -42,23 +42,25 @@ final class EditWalletPresenter {
     private var wallet: Wallet
     private let viewType: EditWalletViewType
     weak var view: EditWalletVieWProtocol?
-    var router: RouterProtocol?
+    private var router: RouterProtocol?
     weak var delegate: EditWalletDelegate?
     var newTheme: Theme?
+    private let coreData: CoreDataManagerProtocol
     
-    init(router: RouterProtocol, view: EditWalletVieWProtocol, wallet: Wallet?, delegate: EditWalletDelegate?) {
+    init(router: RouterProtocol, view: EditWalletVieWProtocol, wallet: Wallet?, delegate: EditWalletDelegate?, coreData: CoreDataManagerProtocol) {
+        self.view = view
+        self.router = router
+        self.delegate = delegate
+        self.coreData = coreData
         if let wallet = wallet {
             self.viewType = .edit
             self.wallet = wallet
         } else {
             self.viewType = .create
-            self.wallet = Wallet(context: CoreDataManager.sharedManager.managedContext)
+            self.wallet = Wallet(context: coreData.managedContext)
             self.wallet.currencyCode = CurrencyModel.defaultCode
             self.wallet.themeId = Int16(ThemeManager.defaultTheme.rawValue)
         }
-        self.view = view
-        self.router = router
-        self.delegate = delegate
     }
 }
 
@@ -82,14 +84,14 @@ extension EditWalletPresenter: EditWalletPresenterProtocol {
         
         wallet.title = title
         wallet.changeDate = Date()
-        CoreDataManager.sharedManager.saveContext()
+        coreData.saveContext()
         delegate?.updateWallet()
         router?.pop()
     }
     
     
     func deleteWallet() {
-        CoreDataManager.sharedManager.deleteObject(wallet)
+        coreData.deleteObject(wallet)
         delegate?.walletWasDeleted()
         router?.popToRoot()
     }
@@ -107,7 +109,7 @@ extension EditWalletPresenter: EditWalletPresenterProtocol {
     }
     
     func back() {
-        if CoreDataManager.sharedManager.contextHasChanges {
+        if coreData.contextHasChanges {
             view?.showAlert()
         } else {
             router?.pop()
@@ -115,7 +117,7 @@ extension EditWalletPresenter: EditWalletPresenterProtocol {
     }
     
     func discardChanges() {
-        CoreDataManager.sharedManager.cancelChanges()
+        coreData.cancelChanges()
         router?.pop()
     }
 }
@@ -130,7 +132,7 @@ extension EditWalletPresenter: ThemeDelegate {
 extension EditWalletPresenter: CurrencyDelegate {
     //TODO: currency change
     func currencyWasChanged() {
-        if let wallet = CoreDataManager.sharedManager.getObject(wallet.objectID) as? Wallet {
+        if let wallet = coreData.getObject(wallet.objectID) as? Wallet {
             self.wallet = wallet
             if let code = wallet.currencyCode {
                 if let symbol = CurrencyModel.getSymbol(forCurrencyCode: code) {

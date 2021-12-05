@@ -23,10 +23,11 @@ class WalletsListPresenterTest: XCTestCase {
     var presenter: WalletsListPresenter!
     var router: RouterProtocol!
     var wallets = [Wallet]()
+    let coreDataManager: CoreDataManagerProtocol = TestCoreDataManager()
 
     
     override func setUpWithError() throws {
-        let wallet = Wallet(context: CoreDataManager.sharedManager.managedContext)
+        let wallet = Wallet(context: coreDataManager.managedContext)
         wallet.title = "Unit test"
         wallet.themeId = 1
         wallet.changeDate = Date()
@@ -35,11 +36,11 @@ class WalletsListPresenterTest: XCTestCase {
         
         view = MockView()
         router = Router(navigationController: UINavigationController(), assemblyBuilder: AssemblyBuilder())
-        presenter = WalletsListPresenter(router: router, view: view)
+        presenter = WalletsListPresenter(router: router, view: view, coreData: coreDataManager)
     }
     
     override func tearDownWithError() throws {
-        CoreDataManager.sharedManager.cancelChanges()
+        coreDataManager.cancelChanges()
         view = nil
         router = nil
         presenter = nil
@@ -53,6 +54,7 @@ class WalletsListPresenterTest: XCTestCase {
     
     func testNumberOfItems() throws {
         XCTAssertNotEqual(presenter.numberOfItems, 0)
+        XCTAssertEqual(presenter.numberOfItems, 1)
     }
     
     func testWalletAt() throws {

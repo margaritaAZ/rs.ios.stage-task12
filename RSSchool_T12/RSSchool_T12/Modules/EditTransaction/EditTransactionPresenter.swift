@@ -32,21 +32,23 @@ final class EditTransactionPresenter {
     private let wallet: Wallet
     private var transaction: Transaction
     private let viewType: EditTransactionViewType
-    var router: RouterProtocol?
-    weak var delegate: TransactionDelegate?
+    private var router: RouterProtocol?
+    private weak var delegate: TransactionDelegate?
+    private let coreDataManager: CoreDataManagerProtocol
     
-    init(router: RouterProtocol, transaction: Transaction?, wallet: Wallet, delegate: TransactionDelegate?) {
+    init(router: RouterProtocol, transaction: Transaction?, wallet: Wallet, delegate: TransactionDelegate?, coreDataManager: CoreDataManagerProtocol) {
         if let transaction = transaction {
             self.viewType = .edit
             self.transaction = transaction
         } else {
             self.viewType = .create
-            self.transaction = Transaction(context: CoreDataManager.sharedManager.managedContext)
+            self.transaction = Transaction(context: coreDataManager.managedContext)
             self.transaction.creationDate = Date()
         }
         self.router = router
         self.wallet = wallet
         self.delegate = delegate
+        self.coreDataManager = coreDataManager
     }
 }
 
@@ -80,7 +82,7 @@ extension EditTransactionPresenter: EditTransactionPresenterProtocol {
             }
             transaction.note = note
             transaction.wallet = wallet
-            CoreDataManager.sharedManager.saveContext()
+            coreDataManager.saveContext()
             delegate?.updateTransaction()
             router?.pop()
         }

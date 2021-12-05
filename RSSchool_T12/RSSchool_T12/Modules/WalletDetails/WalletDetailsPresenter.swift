@@ -30,13 +30,15 @@ protocol WalletDetailsPresenting {
 final class WalletDetailsPresenter {
     private var wallet: Wallet
     private var transactions: [Transaction]?
-    var router: RouterProtocol?
-    weak var view: WalletDetailsViewProtocol?
+    private var router: RouterProtocol?
+    private weak var view: WalletDetailsViewProtocol?
+    private let coreDataManager: CoreDataManagerProtocol
     
-    init(router: RouterProtocol, view: WalletDetailsViewProtocol, wallet: Wallet) {
+    init(router: RouterProtocol, view: WalletDetailsViewProtocol, wallet: Wallet, coreDataManager: CoreDataManagerProtocol) {
         self.wallet = wallet
         self.router = router
         self.view = view
+        self.coreDataManager = coreDataManager
         if let transactions = wallet.transactions {
             self.transactions = transactions.allObjects as? [Transaction]
         }
@@ -78,7 +80,7 @@ extension WalletDetailsPresenter: WalletDetailsPresenting {
 // MARK: EditWalletDelegate
 extension WalletDetailsPresenter: EditWalletDelegate {
     func updateWallet() {
-        if let wallet = CoreDataManager.sharedManager.getObject(wallet.objectID) as? Wallet {
+        if let wallet = coreDataManager.getObject(wallet.objectID) as? Wallet {
             self.wallet = wallet
             view?.updateWalletInfo()
         }
@@ -91,7 +93,7 @@ extension WalletDetailsPresenter: EditWalletDelegate {
 // MARK: TransactionDelegate
 extension WalletDetailsPresenter: TransactionDelegate {
     func updateTransaction() {
-        if let wallet = CoreDataManager.sharedManager.getObject(wallet.objectID) as? Wallet {
+        if let wallet = coreDataManager.getObject(wallet.objectID) as? Wallet {
             self.wallet = wallet
             if let transactions = wallet.transactions {
                 self.transactions = transactions.allObjects as? [Transaction]

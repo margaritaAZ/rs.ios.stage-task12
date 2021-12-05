@@ -13,9 +13,10 @@ class EditWalletPresenterTest: XCTestCase {
     var view: MockView!
     var router: RouterProtocol!
     var wallet: Wallet!
+    let coreDataManager: CoreDataManagerProtocol = TestCoreDataManager()
 
     override func setUpWithError() throws {
-        let wallet = Wallet(context: CoreDataManager.sharedManager.managedContext)
+        let wallet = Wallet(context: coreDataManager.managedContext)
         wallet.title = "Unit test"
         wallet.themeId = 1
         wallet.changeDate = Date()
@@ -24,11 +25,11 @@ class EditWalletPresenterTest: XCTestCase {
         self.wallet = wallet
         view = MockView()
         router = Router(navigationController: UINavigationController(), assemblyBuilder: AssemblyBuilder())
-        presenter = EditWalletPresenter(router: router, view: view, wallet: wallet, delegate: nil)
+        presenter = EditWalletPresenter(router: router, view: view, wallet: wallet, delegate: nil, coreData: coreDataManager)
     }
 
     override func tearDownWithError() throws {
-        CoreDataManager.sharedManager.cancelChanges()
+        coreDataManager.cancelChanges()
         view = nil
         router = nil
         presenter = nil

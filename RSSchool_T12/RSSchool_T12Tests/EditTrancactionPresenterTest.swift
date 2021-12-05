@@ -12,21 +12,22 @@ class EditTrancactionPresenterTest: XCTestCase {
     var presenter: EditTransactionPresenterProtocol!
     var router: RouterProtocol!
     var transaction: Transaction!
+    let coreDataManager: CoreDataManagerProtocol = TestCoreDataManager()
 
     override func setUpWithError() throws {
-        let wallet = Wallet(context: CoreDataManager.sharedManager.managedContext)
-        transaction = Transaction(context: CoreDataManager.sharedManager.managedContext)
+        let wallet = Wallet(context: coreDataManager.managedContext)
+        transaction = Transaction(context: coreDataManager.managedContext)
         transaction.wallet = wallet
         transaction.note = "Note"
         transaction.creationDate = Date()
         transaction.title = "Transaction"
         transaction.value = 10
         router = Router(navigationController: UINavigationController(), assemblyBuilder: AssemblyBuilder())
-        presenter = EditTransactionPresenter(router: router, transaction: transaction, wallet: wallet, delegate: nil)
+        presenter = EditTransactionPresenter(router: router, transaction: transaction, wallet: wallet, delegate: nil, coreDataManager: coreDataManager)
     }
 
     override func tearDownWithError() throws {
-        CoreDataManager.sharedManager.cancelChanges()
+        coreDataManager.cancelChanges()
         router = nil
         presenter = nil
         transaction = nil

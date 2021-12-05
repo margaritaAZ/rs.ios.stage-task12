@@ -22,15 +22,17 @@ protocol WalletsListPresenterProtocol {
 }
 
 class WalletsListPresenter {
-    weak var view: WalletsListViewProtocol?
-    var wallets = [Wallet]()
-    var router: RouterProtocol?
+    private weak var view: WalletsListViewProtocol?
+    private var wallets = [Wallet]()
+    private var router: RouterProtocol?
+    private let coreDataManager: CoreDataManagerProtocol
     private lazy var dateSortDescriptor: NSSortDescriptor = {
         return NSSortDescriptor(key: #keyPath(Wallet.changeDate), ascending: false)
     }()
-    required init(router: RouterProtocol, view: WalletsListViewProtocol) {
+    required init(router: RouterProtocol, view: WalletsListViewProtocol, coreData: CoreDataManagerProtocol) {
         self.view = view
         self.router = router
+        self.coreDataManager = coreData
         getWallets()
         NotificationCenter.default.addObserver(self, selector: #selector(contextDidSave(_:)), name: Notification.Name.NSManagedObjectContextDidSave, object: nil)
     }
@@ -39,7 +41,7 @@ class WalletsListPresenter {
         let request: NSFetchRequest<Wallet> = Wallet.fetchRequest()
         request.sortDescriptors = [dateSortDescriptor]
         do {
-            wallets = try CoreDataManager.sharedManager.managedContext.fetch(request)
+            wallets = try coreDataManager.managedContext.fetch(request)
         } catch {
             print("Error fetching \(error)")
         }

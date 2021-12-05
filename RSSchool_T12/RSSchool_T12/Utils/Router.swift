@@ -27,6 +27,7 @@ protocol RouterProtocol: RouterMain {
 class Router: RouterProtocol {
     var navigationController: UINavigationController?
     var assemblyBuilder: AssemblyBuilderProtocol?
+    let coreDataManager: CoreDataManagerProtocol = CoreDataManager(containerName: "RSSchool_T12")
     
     init(navigationController: UINavigationController, assemblyBuilder: AssemblyBuilderProtocol) {
         self.navigationController = navigationController
@@ -34,18 +35,18 @@ class Router: RouterProtocol {
     }
     
     func initialViewController() {
-        guard let navigationController = navigationController, let walletsListController = assemblyBuilder?.createWalletsListModule(router: self) else { return }
+        guard let navigationController = navigationController, let walletsListController = assemblyBuilder?.createWalletsListModule(router: self, coreDataManager: coreDataManager) else { return }
         navigationController.viewControllers = [walletsListController]
     }
     
     func showWalletDetail(wallet: Wallet) {
-        guard let navigationController = navigationController, let walletsListController = assemblyBuilder?.createWalletsDetailModule(router: self, wallet: wallet)
+        guard let navigationController = navigationController, let walletsListController = assemblyBuilder?.createWalletsDetailModule(router: self, wallet: wallet, coreDataManager: coreDataManager)
         else { return }
         navigationController.pushViewController(walletsListController, animated: true)
     }
     
     func showEditWallet(wallet: Wallet?, delegate: EditWalletDelegate?) {
-        guard let navigationController = navigationController, let editWalletController = assemblyBuilder?.createEditWalletModule(router: self, wallet: wallet, delegate: delegate)
+        guard let navigationController = navigationController, let editWalletController = assemblyBuilder?.createEditWalletModule(router: self, wallet: wallet, delegate: delegate, coreDataManager: coreDataManager)
         else { return }
         navigationController.pushViewController(editWalletController, animated: true)
     }
@@ -63,13 +64,13 @@ class Router: RouterProtocol {
     }
     
     func showEditTransaction(transaction: Transaction?, wallet: Wallet, delegate: TransactionDelegate?) {
-        guard let navigationController = navigationController, let editTransactionController = assemblyBuilder?.createEditTransactionModule(router: self, transaction: transaction, wallet: wallet, delegate: delegate)
+        guard let navigationController = navigationController, let editTransactionController = assemblyBuilder?.createEditTransactionModule(router: self, transaction: transaction, wallet: wallet, delegate: delegate, coreDataManager: coreDataManager)
         else { return }
         navigationController.pushViewController(editTransactionController, animated: true)
     }
     
     func showTransactionDetails(transaction: Transaction, wallet: Wallet, delegate: TransactionDelegate?) {
-        guard let navigationController = navigationController, let vc = assemblyBuilder?.createTransactionDetailsModule(router: self, transaction: transaction, wallet: wallet, delegate: delegate)
+        guard let navigationController = navigationController, let vc = assemblyBuilder?.createTransactionDetailsModule(router: self, transaction: transaction, wallet: wallet, delegate: delegate, coreData: coreDataManager)
         else { return }
         navigationController.pushViewController(vc, animated: true)
     }
